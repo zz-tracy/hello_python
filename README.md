@@ -77,11 +77,7 @@ GOODLE.COM
 `printf()` 函数  
 `return()` 函数
 ## 代码区块
-    <?php
-    echo 'RUNOOB';
-    function test() {
-        echo 'test'
-    }  
+    asfsdfdsfa
 
 '''javascript  
 $(document).ready(function() {  
@@ -99,3 +95,11 @@ $(document).ready(function() {
 
 [1]: http://www.google.com/
 [runoob]: http://www.runoob.com/
+
+# 图片
+![RUNOOB 图标](http://static.runoob.com/images/runoob-logo.png)  
+![RUNOOB 图标](http://static.runoob.com/images/runoob/logo.png "RUNOOB")  
+这个链接用 1 作为网址变量 [RUNOOB][1].
+然后在文档的结尾为变量赋值 (网址)  
+
+[1]:http://static.runoob.com/images/runoob-logo.png
