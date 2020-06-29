@@ -84,23 +84,3 @@ $(document).ready(function() {
     alert('RUNOOB);  
 });  
 '''
-
-# Markdown链接
-这是一个链接 [菜鸟教程](https://www.runoob.com)  
-<https://www.runoob.com>
-## 高级链接
-这个链接用 1 作为网址变量 [Google][1]  
-这个链接用 runoob 作为网址变量 [Runoob][runoob]  
-然后再文档的结尾为变量赋值(网址)
-
-[1]: http://www.google.com/
-[runoob]: http://www.runoob.com/
-
-# 图片
-![RUNOOB 图标](http://static.runoob.com/images/runoob-logo.png)  
-![RUNOOB 图标](http://static.runoob.com/images/runoob/logo.png "RUNOOB")  
-这个链接用 1 作为网址变量 [RUNOOB][1].
-然后在文档的结尾为变量赋值 (网址)  
-
-[1
-|单元格 | 单元格 | 单元格 |]:http://static.runoob.com/images/runoob-logo.png
