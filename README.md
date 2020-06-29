@@ -73,3 +73,18 @@ GOODLE.COM
 * 第二项
     > 学的不仅是技术更是梦想  
         菜鸟教程
+# Markdown代码
+`printf()` 函数  
+`return()` 函数
+## 代码区块
+    <?php
+    echo 'RUNOOB';
+    function test() {
+        echo 'test'
+    }  
+
+'''javascript  
+$(document).ready(function() {  
+    alert('RUNOOB);  
+});  
+'''
