@@ -102,15 +102,5 @@ $(document).ready(function() {
 这个链接用 1 作为网址变量 [RUNOOB][1].
 然后在文档的结尾为变量赋值 (网址)  
 
-[1]:http://static.runoob.com/images/runoob-logo.png
-
-# 表格
-| 表头 | 表头 |
-| ---- | ---- |
-| 单元格 | 单元格 |
-| 单元格 | 单元格 |
-
-| 左对齐 | 右对齐 | 居中对齐 |
-| :---- | ----: | :----: |
-| 单元格 | 单元格 | 单元格 |
-|单元格 | 单元格 | 单元格 |
+[1
+|单元格 | 单元格 | 单元格 |]:http://static.runoob.com/images/runoob-logo.png
