@@ -62,3 +62,41 @@ print(motorcycles)
 
 motorcycles.remove('ducati')
 print(motorcycles)
+
+
+# 使用sort()对列表进行永久性排序
+
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+cars.sort()
+print(cars)
+
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+cars.sort(reverse=True)    # 向sort()方法内传递reverse=True参数即可实现将列表中的元素按着字母相反的顺序排序
+print(cars)
+
+# 使用函数sorted()对列表进行临时排序
+
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+
+print('Here is the original list:')
+print(cars)
+
+print('\nHere is the sorted list:')
+print(sorted(cars))
+
+print('\nHere is the original list again:')
+print(cars)
+
+
+# 使用reverse()倒着打印列表
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print(cars)
+
+cars.reverse()
+print(cars)
+
+
+# 使用列表的长度
+
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print(len(cars))
