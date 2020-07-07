@@ -146,3 +146,30 @@ print(sum(digits))
 
 squares = [value**2 for value in range(1, 11)]
 print(squares)
+
+
+# 切片
+
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print(players[0:3])    # 打印列表中前三个元素
+print(players[:4])    # 打印前四个元素
+print(players[2:])    # 打印第三个元素到最后一个元素
+print(players[-3:])    # 打印倒数三个元素
+print(players[:])    # 打印所有元素
+
+
+# 元祖: 元组使用圆括号来标识, 使用索引来访问其元素
+
+dimensions = (200, 50)
+print(dimensions[0])
+print(dimensions[1])
+
+# 通过重新给元祖变量赋值来修改元祖
+dimensions = (200, 5)
+for dimension in dimensions:
+    print(dimension)
+
+dimensions = (400, 100)
+for dimension in dimensions:
+    print(dimension)
+
