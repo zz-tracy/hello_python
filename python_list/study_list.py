@@ -100,3 +100,49 @@ print(cars)
 
 cars = ['bmw', 'audi', 'toyota', 'subaru']
 print(len(cars))
+
+
+# 使用for循环遍历列表
+
+magicians = ['alice', 'david', 'carolina']
+for magician in magicians:
+    print(magician)
+
+
+# 使用range()函数生成一系列数字
+
+for value in range(1,5):
+    print(value)
+
+# 使用range()函数创建数字列表
+
+numbers = list(range(1,6))
+print(numbers)
+
+# 使用range()函数指定步长
+
+even_numbers = list(range(1,11,2))
+print(even_numbers)
+
+# 创建一个列表,其中包含前10个整数的平方
+
+squares = []
+for value in range(1,11):
+    square = value**2
+    squares.append(square)
+
+print(squares)
+
+
+# 数字列表的简单统计计算
+
+digits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+print(min(digits))
+print(max(digits))
+print(sum(digits))
+
+
+# 列表解析
+
+squares = [value**2 for value in range(1, 11)]
+print(squares)
