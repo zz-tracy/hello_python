@@ -251,3 +251,35 @@ def build_profile(first, last, **user_info):
 
 user_profile = build_profile('albert', 'einstein', location = 'princeton', field='physics')
 print(user_profile)
+
+
+# 将函数存储在模块中
+# 导入整个模块: 模块名称.函数名: model_name.function_name()
+def make_pizza(size, *toppings):
+    """
+    概述要制作的披萨
+    假设该函数存储在pizza.py模块中
+    """
+    print('\nMaking a ' + str(size) + '-inch pizza with the following toppings:')
+    for topping in toppings:
+        print('- ' + topping)
+
+
+# 从pizza.py模块中导入pizza
+# import pizza :让python打开文件pizza.py并将其中的所有函数都复制到这个程序中
+# pizza.make_pizza(16, 'pepperoni')
+# pizza.make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
+
+# 导入特定的函数
+# from module_name import function_name
+
+# 通过用逗号分隔函数名,可以根据需要从模块中导入任意数量的函数:
+# from module_name import function_name1, function_name2, function_name3
+
+# 使用as给函数指定别名: from module_name import function_name as 别名
+# 例如: from pizza import make_pizza as mp
+
+# 使用as给模块指定别名: import module_name as 别名
+# 例如: import pizza as p
+
+# 导入模块中的所有函数: from module_name import *
