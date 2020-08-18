@@ -110,3 +110,70 @@ my_used_car.read_odometer()
 
 my_used_car.increment_odometer(100)
 my_used_car.read_odometer()
+
+
+# 继承
+class Car():
+    def __init__(self, make, model, year):
+        """初始化描述汽车的属性"""
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+
+    def get_descriptive_name(self):
+        """返回整洁的描述性信息"""
+        long_name = str(self.year) + ' ' + self.make + ' ' + self.model
+        return long_name.title()
+
+    def read_odometer(self):
+        """打印一条指出汽车里程的消息"""
+        print('This car has ' + str(self.odometer_reading) + ' miles on it.')
+
+    def update_odometer(self, mileage):
+        """将里程表读数设置为指定的值"""
+        self.odometer_reading = mileage
+
+    # 通过方法对属性的值进行递增
+    def increment_odometer(self, miles):
+        """将里程表读数增加指定的量"""
+        self.odometer_reading += miles
+
+
+class ElectricCar(Car):
+    """电动汽车的独特之处"""
+
+    def __init__(self, make, model, year):
+        """初始化父类的属性"""
+        # super()是一个特殊函数，帮助Python将父类和子类关联起来
+        super().__init__(make, model, year)
+        # 给子类定义属性
+        self.battery_size = 70
+        self.battery = Battery()
+
+    # 给子类定义方法
+    def describe_battery(self):
+        """打印一条描述电瓶容量的消息"""
+        print('This car has a ' + str(self.battery_size) + '-kwh battery.')
+
+    # 重写父类方法：即该方法要与重写的父类方法同名，这样Python将不会考虑父类的方法
+    def fill_gas_tank(self):
+        """电动车漆没有邮箱"""
+        print('This car doesn\'t need a gas tank!')
+
+
+class Battery():
+    """一次模拟电动汽车电瓶的简单尝试"""
+    def __init__(self, battery_size=70):
+        """初始化电瓶的属性"""
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        """打印一条描述电瓶容量的消息"""
+        print('This car has a ' + str(self.battery_size) + '-kwh battery.')
+
+
+my_tesla = ElectricCar('tesla', 'model\'s', 2016)
+print(my_tesla.get_descriptive_name())
+my_tesla.describe_battery()
+my_tesla.battery.describe_battery()
