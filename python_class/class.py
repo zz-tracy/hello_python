@@ -177,3 +177,19 @@ my_tesla = ElectricCar('tesla', 'model\'s', 2016)
 print(my_tesla.get_descriptive_name())
 my_tesla.describe_battery()
 my_tesla.battery.describe_battery()
+
+
+# 导入类
+# from module_name import Class_name
+
+# 从一个模块中导入多个类
+# from module_name import Class_name1, Class_name2, Class_name3...
+
+
+# 导入整个模块
+# import module_name
+# 然后使用module_name.Class() 访问需要的类
+
+
+# 导入模块中的所有类
+# from module_name import *
