@@ -1,6 +1,7 @@
 # 创建Dog类
 class Dog():
     """一次模拟小狗的简单尝试"""
+
     def __init__(self, name, age):
         """初始化属性name和age"""
         self.name = name
@@ -21,11 +22,9 @@ my_dog = Dog('willie', 6)
 print('My dog\'s name is ' + my_dog.name.title() + '.')
 print('My dog is ' + str(my_dog.age) + 'years old.')
 
-
 # 调用方法
 my_dog.sit()
 my_dog.roll_over()
-
 
 # 创建多个实例
 my_dog = Dog('willie', 6)
@@ -59,14 +58,15 @@ class Car():
         """打印一条指出汽车里程的消息"""
         print('This car has ' + str(self.odometer_reading) + ' miles on it.')
 
+
 my_new_car = Car('audi', 'a4', 2016)
 print(my_new_car.get_descriptive_name())
 print(my_new_car.read_odometer())
 
-
 # 修改属性的值
 my_new_car.odometer_reading = 23
 print(my_new_car.read_odometer())
+
 
 # 通过方法修改属性的值
 class Car():
@@ -164,6 +164,7 @@ class ElectricCar(Car):
 
 class Battery():
     """一次模拟电动汽车电瓶的简单尝试"""
+
     def __init__(self, battery_size=70):
         """初始化电瓶的属性"""
         self.battery_size = battery_size
@@ -177,7 +178,6 @@ my_tesla = ElectricCar('tesla', 'model\'s', 2016)
 print(my_tesla.get_descriptive_name())
 my_tesla.describe_battery()
 my_tesla.battery.describe_battery()
-
 
 # 导入类
 # from module_name import Class_name
@@ -193,4 +193,3 @@ my_tesla.battery.describe_battery()
 
 # 导入模块中的所有类
 # from module_name import *
-
