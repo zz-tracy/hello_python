@@ -33,5 +33,77 @@ with open(filename) as file_object:
     for line in file_object:
         print(line.rstrip())
 
+# 创建一个包含文件各行内容的列表
+filename = r'C:\Users\hp\Desktop\demo\pi_digits.txt'
 
-#
+with open(filename) as file_object:
+    lines = file_object.readlines()  # 使用readlines（）从文件中读取每一行，并将其存储在一个列表中
+
+for line in lines:
+    print(line.rstrip())
+
+# 使用文件的内容
+filename = r'C:\Users\hp\Desktop\demo\pi_digits.txt'
+
+with open(filename) as file_object:
+    lines = file_object.readlines()
+
+pi_string = ''
+for line in lines:
+    pi_string += line.rstrip()
+
+print(pi_string)
+print(len(pi_string))
+
+# 针对一个包含一百万位的大型文件
+filename = r'C:\Users\hp\Desktop\demo\pi_million_digits.txt'
+
+with open(filename) as file_object:
+    lines = file_object.readlines()
+
+pi_string = ''
+for line in lines:
+    pi_string += line.rstrip()
+
+print(pi_string[:52] + '......')
+print(len(pi_string))
+
+# 圆周率值中包含你的生日吗？
+filename = r'C:\Users\hp\Desktop\demo\pi_million_digits.txt'
+
+with open(filename) as file_object:
+    lines = file_object.readlines()
+
+pi_string = ''
+for line in lines:
+    pi_string += line.rstrip()
+
+birthday = input('Enter your birthday, in the form mmddyy: ')
+if birthday in pi_string:
+    print('Your birthday appears in the first million digits of pi!')
+else:
+    print('Your birthday does not appear in the first million digits pf pi.')
+
+
+# 写入文件
+filename = r'C:\Users\hp\Desktop\demo\programming.txt'
+
+with open(filename, 'w') as file_object:
+    file_object.write('---- + I love programming.')    # wirte()函数会覆盖之前写入的文件
+
+
+# 写入多行
+filename = r'C:\Users\hp\Desktop\demo\programming.txt'
+
+with open(filename, 'w') as file_object:
+    file_object.write('---- I love programming.\n')
+    file_object.write('---- I love creating new games.\n')
+
+# 附加到文件
+filename = r'C:\Users\hp\Desktop\demo\programming.txt'
+
+with open(filename, 'a') as file_object:
+    file_object.write('I also love finding meaning in large datasets.\n')
+    file_object.write('I love creating apps that can run in a browser.\n')
+
+
