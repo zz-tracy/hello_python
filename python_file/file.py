@@ -107,3 +107,26 @@ with open(filename, 'a') as file_object:
     file_object.write('I love creating apps that can run in a browser.\n')
 
 
+
+# 异常
+# 处理ZeroDivisionError异常
+# 使用try-except代码块
+try:
+    print(5/0)
+except ZeroDivisionError:
+    print('You can\'t divide by zero')
+
+
+# 使用异常避免崩溃
+print('Give me two numbers, and I\'ll divide them.')
+print('Enter \'q\' to quit.')
+
+while True:
+    first_number = input('\nFirst number: ')
+    if first_number == 'q':
+        break
+    second_number = input('Second number: ')
+    if second_number == 'q':
+        break
+    answer = int(first_number) / int(second_number)
+    print(answer)
