@@ -84,13 +84,11 @@ if birthday in pi_string:
 else:
     print('Your birthday does not appear in the first million digits pf pi.')
 
-
 # 写入文件
 filename = r'C:\Users\hp\Desktop\demo\programming.txt'
 
 with open(filename, 'w') as file_object:
-    file_object.write('---- + I love programming.')    # wirte()函数会覆盖之前写入的文件
-
+    file_object.write('---- + I love programming.')  # wirte()函数会覆盖之前写入的文件
 
 # 写入多行
 filename = r'C:\Users\hp\Desktop\demo\programming.txt'
@@ -106,16 +104,13 @@ with open(filename, 'a') as file_object:
     file_object.write('I also love finding meaning in large datasets.\n')
     file_object.write('I love creating apps that can run in a browser.\n')
 
-
-
 # 异常
 # 处理ZeroDivisionError异常
 # 使用try-except代码块
 try:
-    print(5/0)
+    print(5 / 0)
 except ZeroDivisionError:
     print('You can\'t divide by zero')
-
 
 # 使用异常避免崩溃
 print('Give me two numbers, and I\'ll divide them.')
@@ -130,3 +125,82 @@ while True:
         break
     answer = int(first_number) / int(second_number)
     print(answer)
+
+# else代码块
+print('Give me two numbers, and I\'ll divide them.')
+print('Enter \'q\' to quit.')
+
+while True:
+    if first_number == 'q':
+        break
+    second_number = input('Second number: ')
+    try:
+        answer = int(first_number) / int(second_number)
+    except ZeroDivisionError:
+        print('You can\'t divide by 0!')
+    else:
+        print(answer)
+
+# 处理FileNotFoundError异常
+filename = 'alice.txt'
+
+try:
+    with open(filename) as f_obj:
+        contents = f_obj.read()
+except FileNotFoundError:
+    msg = 'Sorry, the file ' + filename + ' does not exist.'
+    print(msg)
+
+# 分析文本
+filename = 'alice.txt'
+
+try:
+    with open(filename) as f_obj:
+        contents = f_obj.read()
+except FileNotFoundError:
+    msg = 'Sorry, the file ' + filename + ' does not exist.'
+    print(msg)
+else:
+    # 计算文件大致包含多少个单词
+    words = contents.split()
+    num_words = len(words)
+    print('The file ' + filename + 'has about ' + str(num_words) + ' words.')
+
+
+# 使用多个文件
+def count_words(filename):
+    """计算一个文件大致包含多少个单词"""
+    try:
+        with open(filename) as f_obj:
+            contents = f_obj.read()
+    except FileNotFoundError:
+        msg = 'Sorry, the file ' + filename + ' does not exist.'
+        print(msg)
+    else:
+        # 计算文件大致包含多少个单词
+        words = contents.split()
+        num_words = len(words)
+        print('The file ' + filename + 'has about ' + str(num_words) + ' words.')
+
+
+filenames = ['alice.txt', 'siddhartha.txt', 'moby_dick.txt', 'little_women.txt']
+for filename in filenames:
+    count_words(filename)
+
+
+# pass语句
+def count_words(filename):
+    """计算一个文件大致包含多少个单词"""
+    try:
+        pass
+    except:
+        pass    # pass语句充当占位符，提醒你在程序的某个地方什么都没有做，以后也许要在这里做些什么
+    else:
+        pass
+
+
+filenames = ['alice.txt', 'siddhartha.txt', 'moby_dick.txt', 'little_women.txt']
+for filename in filenames:
+    count_words(filename)
+
+
