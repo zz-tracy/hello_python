@@ -142,7 +142,7 @@ while True:
         print(answer)
 
 # 处理FileNotFoundError异常
-filename = 'alice.txt'
+filename = r'C:\Users\hp\Desktop\demo\alice.txt'
 
 try:
     with open(filename) as f_obj:
@@ -152,7 +152,7 @@ except FileNotFoundError:
     print(msg)
 
 # 分析文本
-filename = 'alice.txt'
+filename = r'C:\Users\hp\Desktop\demo\alice.txt'
 
 try:
     with open(filename) as f_obj:
@@ -183,9 +183,9 @@ def count_words(filename):
         print('The file ' + filename + 'has about ' + str(num_words) + ' words.')
 
 
-filenames = ['alice.txt', 'siddhartha.txt', 'moby_dick.txt', 'little_women.txt']
-for filename in filenames:
-    count_words(filename)
+# filenames = ['alice.txt', 'siddhartha.txt', 'moby_dick.txt', 'little_women.txt']
+# for filename in filenames:
+#     count_words(filename)
 
 
 # pass语句
@@ -194,13 +194,48 @@ def count_words(filename):
     try:
         pass
     except:
-        pass    # pass语句充当占位符，提醒你在程序的某个地方什么都没有做，以后也许要在这里做些什么
+        pass  # pass语句充当占位符，提醒你在程序的某个地方什么都没有做，以后也许要在这里做些什么
     else:
         pass
 
 
-filenames = ['alice.txt', 'siddhartha.txt', 'moby_dick.txt', 'little_women.txt']
-for filename in filenames:
-    count_words(filename)
+# filenames = ['alice.txt', 'siddhartha.txt', 'moby_dick.txt', 'little_women.txt']
+# for filename in filenames:
+#     count_words(filename)
 
+# 存储数据
+# 使用json.dump()和json.load()
+
+import json
+
+
+numbers = [2, 3, 4, 5, 6, 7, 12]
+
+filename = r'C:\Users\hp\Desktop\demo\numbers.json'
+with open(filename, 'w') as f_obj:
+    # 使用json.dump()函数将数字列表存储到文件numbers.json中
+    json.dump(numbers, f_obj)
+
+
+# 使用json.load()函数将这个列表读取到内存中
+with open(filename) as f_obj:
+    numbers = json.load(f_obj)
+
+print(numbers)
+
+
+
+# 保存和读取用户生成的数据
+username = input('What is your name? ')
+
+filename = r'C:\Users\hp\Desktop\demo\username.json'
+with open(filename, 'w') as f_obj:
+    json.dump(username, f_obj)
+    print('We\'ll remember you when you come back, ' + username + '!')
+
+
+# 使用json.load()存储在username.json中的信息读取到变量username中
+with open(filename) as f_obj:
+    username = json.load(f_obj)
+    print('Welcome back, ' + username + '!')
 
